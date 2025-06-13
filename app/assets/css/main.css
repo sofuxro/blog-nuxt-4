@@ -1,0 +1,33 @@
+@import './components.css';
+
+:root {
+  --text-color-gray: #222;
+  --text-color-gray-light: #646464;
+  --text-color-gray-lighter: #ebebeb;
+  --text-color-gray-lightest: #f0f0f0;
+
+  --blue-light: #f4f7ff;
+}
+
+body {
+  color: var(--text-color-gray);
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+h2 {
+  color: var(--text-color-gray-light);
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--text-color-gray-lighter);
+  border-bottom: 1px solid var(--text-color-gray-lightest);
+}

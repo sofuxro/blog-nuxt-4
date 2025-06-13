@@ -14,6 +14,7 @@ export default withNuxt({
     }],
     'import/order': 'off',
     'vue/attribute-hyphenation': 'off',
+    'vue/singleline-html-element-content-newline': 'off',
     //                                        Check why is this missing from eslint nuxt. Do I have the eslint rules for nuxt ?
     // 'vue/no-multiple-template-root': 2, // TODO - create a discussion regarding this and propose it as a vue-recommended (at least) if not essential
   },
