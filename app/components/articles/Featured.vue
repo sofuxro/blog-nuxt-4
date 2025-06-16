@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import CategoryBtn from '~/components/articles/CategoryBtn.vue'
+
 import { formatDate } from '~~/shared/utils/date'
 
 const { date, title, description, image, categories } = defineProps<{
@@ -32,13 +34,14 @@ const { date, title, description, image, categories } = defineProps<{
 
           <div class="flex justify-between items-center">
             <div>
-              <span
+              <CategoryBtn
                 v-for="category in categories"
                 :key="category"
-                class="min-h-[50px] inline-block bg-blue-50 hover:bg-blue-100 text-neutral-600 text-base font-semibold mt-6 mr-2 px-2.5 py-3 rounded-lg cursor-pointer transition-colors duration-300"
-              >{{ category }}</span>
+                class="mt-6 mr-2"
+                :category="category"
+              />
             </div>
-            <button class="btn-text mt-6">Read <fa icon="arrow-right" class="fa-xs" /></button>
+            <NuxtLink to="/post/1" class="btn-text mt-6">Read <fa icon="arrow-right" class="fa-xs" /></NuxtLink>
           </div>
         </div>
       </div>

@@ -1,6 +1,12 @@
+<script setup lang="ts">
+</script>
+
 <template>
   <NuxtLayout>
     <NuxtRouteAnnouncer />
-    <NuxtPage />
+    <ClientOnly>
+      <!-- TODO - Temporary -->
+      <NuxtPage />
+    </ClientOnly>
   </NuxtLayout>
 </template>

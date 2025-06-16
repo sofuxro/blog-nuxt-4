@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import FeaturedArticle from '~/components/articles/Featured.vue'
-import ArticleList from '~/components/articles/List.vue'
+import Article from '~/components/articles/index.vue'
 
 const featured = {
   date: '2023-10-01',
@@ -12,20 +11,12 @@ const featured = {
 </script>
 
 <template>
-  <div>
-    <div class="w-[50%] pb-[84px]">
-      <h1>Ideas for how to Socialize</h1>
-      <h2>
-        Welcome to our Hub, where we share tips, trends and
-        inspiration for unforgettable experiences.
-      </h2>
-    </div>
-
-    <FeaturedArticle v-bind="featured" />
-
-    <div class="divider my-[84px]" />
-
-    <p class="font-bold text-2xl pb-[50px]">Latest Articles</p>
-    <ArticleList />
+  <div class="flex flex-wrap -mx-[10px]">
+    <Article
+      v-for="n of 3"
+      :key="n"
+      class="w-1/3"
+      v-bind="featured"
+    />
   </div>
 </template>
